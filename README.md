@@ -1,16 +1,19 @@
 # JavaScript going Vanilla
-# Part 4: Scope & Context
+
+by Andrei Pfeiffer
+
+## Part 4: Scope & Context
 
 "Scope" and "Context" in JavaScript are 2 different things.
 
-## Scope
+### Scope
 
 * The body of the function
 * Any variable defined here is not available on the "parent scope" / "outside the function"
 * But they are available in all "children scopes" / "inner functions"
 * !!! Lexical scope & closures
 
-## Context
+### Context
 
 * The "environment" where the function executes
 * The context is always an object (or "undefined")
@@ -22,14 +25,14 @@ or
 
 > It's possible to have 1 function that executes in 2 different __contexts__
 
-## Who is _"this"_?
+### Who is _"this"_?
 
 * reserved word, available in all functions
 * object (or "undefined")
 * points to the function's current __context__
 * takes different values, depending how the function is called
 
-### Function form
+#### Function form
 
 When calling a simple function, it depends if ES5 '__strict mode__' is enabled or not. If it's enabled, the context will be set to `undefined`, otherwise it will reference the `window [Object]`, aka. the __global object__.
 
@@ -48,7 +51,7 @@ foo();
 // > undefined
 ```
 
-### Method form
+#### Method form
 
 When calling a method from an object, it will always reference the object itself.
 
@@ -62,7 +65,7 @@ o.foo();
 // > [Object] o
 ```
 
-### Constructor form
+#### Constructor form
 
 Inside a Constructor, it will always reference the newly created object.
 
@@ -74,7 +77,7 @@ var o = new Foo();
 // > [Object] o (the newly created Object)
 ```
 
-### Call, Apply form
+#### Call, Apply form
 
 To any function, or method, we can pass a custom context, using either `call` or `apply` methods.
 
