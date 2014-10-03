@@ -9,9 +9,11 @@ by Andrei Pfeiffer
 ### Scope
 
 * The body of the function
-* Any variable defined here is not available on the "parent scope" / "outside the function"
-* But they are available in all "children scopes" / "inner functions"
-* !!! Lexical scope & closures
+* Any variable defined here is not visible on the "parent scope" or "outside the function"
+* But any variable defined here is available in all "descendant scopes" or "inner functions"
+* __Lexical scope__: defines how variables are resolved in nested functions
+* Inner functions contain the scope of the outer functions
+* __Closures__ provide the same behavior even after the outer function has returned
 
 ### Context
 
