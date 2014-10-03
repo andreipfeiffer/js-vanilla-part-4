@@ -1,15 +1,18 @@
-# JavaScript going Vanilla, part 4 | Scope & Context
+# JavaScript going Vanilla, part 4
+## Scope & Context
 
 "Scope" and "Context" in JavaScript are 2 different things.
 
-## Scope
+This is intended to be the content for a tim.js presentation.
+
+### Scope
 
 * The body of the function
 * Any variable defined here is not available on the "parent scope" / "outside the function"
 * But they are available in all "children scopes" / "inner functions"
 * !!! Lexical scope tree
 
-## Context
+### Context
 
 * The "environment" where the function executes
 * The context is always an object (or "undefined")
@@ -21,14 +24,14 @@ or
 
 > It's possible to have 1 function that executes in 2 different __contexts__
 
-## Who is _"this"_?new
+### Who is _"this"_?
 
 * reserved word, available in all functions
 * object (or "undefined")
 * points to the function's current __context__
 * takes different values, depending how the function is called
 
-### Function form
+#### Function form
 
 ```javascript
 function foo() {
@@ -43,7 +46,7 @@ function foo() {
 foo(); // undefined
 ```
 
-### Method form
+#### Method form
 
 ```
 var o = {
@@ -54,7 +57,7 @@ var o = {
 o.foo(); // [Object] o
 ```
 
-### Constructor form
+#### Constructor form
 
 ```
 function Foo() {
@@ -63,7 +66,7 @@ function Foo() {
 var o = new Foo(); // [Object] o
 ```
 
-### Call, Apply form
+#### Call, Apply form
 
 ```javascript
 var o = {
