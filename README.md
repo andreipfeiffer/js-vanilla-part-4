@@ -37,33 +37,37 @@ or
 function foo() {
 	console.log( this );
 }
-foo(); // global object (window)
+foo();
+// > global object (window)
 
 function foo() {
 	'use strict';
 	console.log( this );
 }
-foo(); // undefined
+foo();
+// > undefined
 ```
 
 #### Method form
 
-```
+```javascript
 var o = {
 	foo: function() {
 		console.log( this );
 	}
 };
-o.foo(); // [Object] o
+o.foo();
+// > [Object] o
 ```
 
 #### Constructor form
 
-```
+```javascript
 function Foo() {
 	console.log( this );
 };
-var o = new Foo(); // [Object] o
+var o = new Foo();
+// > [Object] o
 ```
 
 #### Call, Apply form
@@ -76,5 +80,6 @@ var o = {
 };
 
 var o2 = {};
-o.foo.call( o2 ); // [Object] o2
+o.foo.call( o2 );
+// > [Object] o2 (the newly created Object)
 ```
