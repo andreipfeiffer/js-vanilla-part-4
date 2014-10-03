@@ -33,6 +33,8 @@ or
 
 #### Function form
 
+When calling a simple function, it depends if ES5 '__strict mode__' is enabled or not. If it's enabled, the context will be set to `undefined`, otherwise it will reference the `window [Object]`, aka. the __global object__.
+
 ```javascript
 function foo() {
 	console.log( this );
@@ -50,6 +52,8 @@ foo();
 
 #### Method form
 
+When calling a method from an object, it will always reference the object itself.
+
 ```javascript
 var o = {
 	foo: function() {
@@ -62,15 +66,19 @@ o.foo();
 
 #### Constructor form
 
+Inside a Constructor, it will always reference the newly created object.
+
 ```javascript
 function Foo() {
 	console.log( this );
 };
 var o = new Foo();
-// > [Object] o
+// > [Object] o (the newly created Object)
 ```
 
 #### Call, Apply form
+
+To any function, or method, we can pass a custom context, using either `call` or `apply` methods.
 
 ```javascript
 var o = {
@@ -81,5 +89,5 @@ var o = {
 
 var o2 = {};
 o.foo.call( o2 );
-// > [Object] o2 (the newly created Object)
+// > [Object] o2 (the specified Object)
 ```
