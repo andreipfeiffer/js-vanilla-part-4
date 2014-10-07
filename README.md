@@ -8,12 +8,32 @@ by Andrei Pfeiffer
 
 ### Scope
 
-* Also called "execution context" in ECMAScript standards, which explains the confusion between the 2
-* Refers to variables visibility
-* Any variable defined here is not visible on the "parent scope" or "outside the function"
-* But any variable defined here is available in all "descendant scopes" or "inner functions"
-* __Lexical scope__: defines how variables are resolved in nested functions
-* Inner functions contain the scope of the outer functions
+* Also called "execution context" in ECMAScript standards, which explains the confusion between the 2 terms
+* Scope is actually a portion of code
+* In JavaScript, scope is also named "lexical scope", or "static scope" because it gets evaluated and rendered at compile time
+* Scope refers to variables visibility
+  ```javascript
+  // global scope
+  var nr = 1;
+  
+  function parent() {
+    // parent scope
+    var nr = 2;
+    
+    function inner() {
+    	// inner scope
+    	var nr = 3;
+    }
+    
+    inner();
+  }
+  
+  parent();
+  ```
+
+* Any variable defined inside of a scope is not visible on the "parent scope" or "outside the function"
+* But the same variable is available in all "descendant scopes" or "inner functions"
+* So, inner functions contain the scope of the outer functions
 * __Closures__ provide the same behavior even after the outer function has returned
 
 ### Context
