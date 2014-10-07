@@ -8,7 +8,8 @@ by Andrei Pfeiffer
 
 ### Scope
 
-* The body of the function
+* Also called "execution context" in ECMAScript standards, which explains the confusion between the 2
+* Refers to variables visibility
 * Any variable defined here is not visible on the "parent scope" or "outside the function"
 * But any variable defined here is available in all "descendant scopes" or "inner functions"
 * __Lexical scope__: defines how variables are resolved in nested functions
@@ -17,11 +18,10 @@ by Andrei Pfeiffer
 
 ### Context
 
-* Also called "execution context"
 * The "environment" where the function executes
-* The context is always an object (or "undefined")
-* The context is "this"
-* It gets destroyed after the it has executed all of its code
+* The context is always an object
+* The context can be refered to using "this" keyword
+* It gets destroyed after it has executed all of its code
 
 > It's possible to have 2 different functions having the same __context__
 
