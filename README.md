@@ -17,9 +17,11 @@ by Andrei Pfeiffer
 
 ### Context
 
+* Also called "execution context"
 * The "environment" where the function executes
 * The context is always an object (or "undefined")
 * The context is "this"
+* It gets destroyed after the it has executed all of its code
 
 > It's possible to have 2 different functions having the same __context__
 
