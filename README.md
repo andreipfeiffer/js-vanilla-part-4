@@ -67,7 +67,9 @@ function foo() {
 }
 foo();
 // > global object (window)
+```
 
+```javascript
 function foo() {
 	'use strict';
 	console.log( this );
@@ -97,7 +99,8 @@ Inside a Constructor, it will always reference the newly created object.
 ```javascript
 function Foo() {
 	console.log( this );
-};
+}
+
 var o = new Foo();
 // > [Object] o (the newly created Object)
 ```
