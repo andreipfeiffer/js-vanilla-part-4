@@ -46,7 +46,7 @@ by Andrei Pfeiffer
 
 > It's possible to have 2 different functions having the same __context__
 
-or
+> _or_
 
 > It's possible to have 1 function that executes in 2 different __contexts__
 
