@@ -65,6 +65,7 @@ When calling a simple function, it depends if ES5 '__strict mode__' is enabled o
 function foo() {
 	console.log( this );
 }
+
 foo();
 // > global object (window)
 ```
@@ -74,6 +75,7 @@ function foo() {
 	'use strict';
 	console.log( this );
 }
+
 foo();
 // > undefined
 ```
@@ -88,6 +90,7 @@ var o = {
 		console.log( this );
 	}
 };
+
 o.foo();
 // > [Object] o
 ```
@@ -133,8 +136,8 @@ var o = {
 };
 
 var o2 = {};
-var fuz = o.foo.bind( o2 );
+var bar = o.foo.bind( o2 );
 
-fuz();
+bar();
 // > [Object] o2 (the specified Object)
 ```
