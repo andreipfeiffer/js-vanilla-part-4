@@ -4,7 +4,7 @@ by Andrei Pfeiffer
 
 ## Part 4: Scope & Context
 
-"Scope" and "Context" in JavaScript are 2 different things.
+"Scope" and "Context" in JavaScript are 2 different things. Due to some unfortunate naming conventions by ECMAScript standards and the community itself, there is some confusion about the meaning of these 2 terms.
 
 ### Scope
 
