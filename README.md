@@ -117,3 +117,21 @@ var o2 = {};
 o.foo.call( o2 );
 // > [Object] o2 (the specified Object)
 ```
+
+#### Bind form
+
+ES5 introduces a new method, that allow permanent binding of a custom context, to a function.
+
+```javascript
+var o = {
+	foo: function() {
+		console.log( this );
+	}
+};
+
+var o2 = {};
+var fuz = o.foo.bind( o2 );
+
+fuz();
+// > [Object] o2 (the specified Object)
+```
