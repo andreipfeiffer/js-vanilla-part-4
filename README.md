@@ -8,7 +8,7 @@ by Andrei Pfeiffer
 
 ### Scope
 
-* Also called "execution context" in ECMAScript standards, which explains the confusion between the 2 terms
+* Also called "Execution Context" in ECMAScript standards, which explains the confusion between the 2 terms
 * Scope is actually a portion of code
 * In JavaScript, scope is also named "lexical scope", or "static scope" because it gets evaluated and rendered at compile time
 * Scope refers to variables visibility
@@ -38,10 +38,11 @@ by Andrei Pfeiffer
 
 ### Context
 
+* Called "ThisBinding" in the ECMAScript standards
+* Can be refered to using "this" keyword
 * The "environment" where the function executes
 * The context is always an object
-* The context can be refered to using "this" keyword
-* It gets destroyed after it has executed all of its code
+* It gets destroyed after it has executed all of the function's code
 
 > It's possible to have 2 different functions having the same __context__
 
