@@ -120,7 +120,7 @@ o.foo.call( o2 );
 
 #### Bind form
 
-ES5 introduces a new method, that allow permanent binding of a custom context, to a function.
+ES5 introduces a new method, that allows permanent binding of a custom context, to a function.
 
 ```javascript
 var o = {
