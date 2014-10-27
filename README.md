@@ -30,7 +30,6 @@ by Andrei Pfeiffer
   
   parent();
   ```
-
 * Any variable defined inside of a scope is not visible on the "parent scope" or "outside the function"
 * But the same variable is available in all "descendant scopes" or "inner functions"
 * So, inner functions contain the scope of the outer functions
